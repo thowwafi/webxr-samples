@@ -92,6 +92,9 @@ function onSessionStarted(session) {
   } else if (choosenObject == "stereo") {
     let flower = new Gltf2Node({ url: "media/gltf/stereo/stereo.gltf" });
     arObject.addNode(flower);
+  } else if (choosenObject == "headset") {
+    let flower = new Gltf2Node({ url: "media/gltf/headset/headset.gltf" });
+    arObject.addNode(flower);
   }
   console.log(arObject);
   session.addEventListener("end", onSessionEnded);
