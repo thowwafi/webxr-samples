@@ -32,12 +32,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     <title>Barebones AR</title>
   </head>
   <body>
-    <div id="overlay">
-      <div class="button_menu">
-        <div id="session-info"></div>
-        <div id="warning-zone"></div>
-        <button id="xr-button" class="barebones-button" disabled>XR not found</button>
-      </div>
+    <div class="title-project">
+      <h1>AR Hit Test</h1>
     </div>
     <div class="select-button">
       <select name="objects" id="objects">
@@ -46,6 +42,15 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <option value="stereo">Stereo</option>
       </select>
     </div>
+    <div id="overlay">
+      <div id="stabilization"></div>
+      <div class="button_menu">
+        <div id="session-info"></div>
+        <div id="warning-zone"></div>
+        <button id="xr-button" class="barebones-button" disabled>XR not found</button>
+      </div>
+    </div>
+      <!-- <div id="frame-3d"></div> -->
     <script type="module" src="app.js"></script>
   </body>
 </html>

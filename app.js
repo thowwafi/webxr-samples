@@ -34,7 +34,7 @@ let shadow = new DropShadowNode();
 vec3.set(shadow.scale, 0.15, 0.15, 0.15);
 arObject.addNode(shadow);
 
-const MAX_FLOWERS = 2;
+const MAX_FLOWERS = 1;
 let flowers = [];
 
 // Ensure the background is transparent for AR.
@@ -83,6 +83,7 @@ function onButtonClicked() {
 function onSessionStarted(session) {
   xrSession = session;
   xrButton.innerHTML = "Exit AR";
+  document.getElementById("overlay").classList.add("ar");
 
   let choosenObject = document.getElementById("objects").value;
   if (choosenObject == "flower") {
@@ -144,6 +145,7 @@ function onSessionEnded(event) {
   xrButton.innerHTML = "Enter AR";
   document.getElementById("session-info").innerHTML = "";
   gl = null;
+  location.reload();
 }
 function addARObjectAt(matrix) {
   let newFlower = arObject.clone();
@@ -188,6 +190,7 @@ function onXRFrame(t, frame) {
       let pose = hitTestResults[0].getPose(xrRefSpace);
       reticle.visible = true;
       reticle.matrix = pose.transform.matrix;
+      document.getElementById("overlay").classList.remove("ar");
     }
   }
 
