@@ -79,3 +79,31 @@ canvas {
   color: rgb(80, 168, 252);
   background-color: rgba(255, 255, 255, 0.7);
 }
+
+.button_menu {
+  position: absolute;
+  left: 50%;
+  bottom: 55px;
+  transform: translate(-50%, 0);
+  margin: 1em 1em 2em 1em;
+  z-index: 10;
+  display: block;
+  line-height: 2em;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.select-button {
+  position: absolute;
+  left: 50%;
+  bottom: 130px;
+  transform: translate(-50%, 0);
+  margin: 1em 1em 2em 1em;
+  z-index: 10;
+  display: block;
+  line-height: 2em;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
