@@ -95,10 +95,14 @@ function onSessionStarted(session) {
   } else if (choosenObject == "headset") {
     let flower = new Gltf2Node({ url: "media/gltf/headset/headset.gltf" });
     arObject.addNode(flower);
-  } else if (choosenObject == "bus-shed") {
+  } else if (choosenObject == "bus-shed-url") {
     let flower = new Gltf2Node({
       url:
         "https://bzid-demo-assets-singapore.s3-ap-southeast-1.amazonaws.com/Bus-shed.gltf",
+    });
+  } else if (choosenObject == "bus-shed-downloaded") {
+    let flower = new Gltf2Node({
+      url: "media/gltf/bus-shed/bus-shed.gltf",
     });
     arObject.addNode(flower);
   }
