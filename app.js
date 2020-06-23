@@ -139,6 +139,11 @@ function onSessionStarted(session) {
       url: "media/gltf/gltf_files/fish.glb",
     });
     arObject.addNode(flower);
+  } else if (choosenObject == "door") {
+    let flower = new Gltf2Node({
+      url: "media/gltf/gltf_files/door.gltf",
+    });
+    arObject.addNode(flower);
   }
   console.log(arObject);
   session.addEventListener("end", onSessionEnded);
