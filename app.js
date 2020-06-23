@@ -114,6 +114,31 @@ function onSessionStarted(session) {
       url: "media/gltf/bus-shed/bus-shed.gltf",
     });
     arObject.addNode(flower);
+  } else if (choosenObject == "avocado") {
+    let flower = new Gltf2Node({
+      url: "media/gltf/gltf_files/avocado.glb",
+    });
+    arObject.addNode(flower);
+  } else if (choosenObject == "box1") {
+    let flower = new Gltf2Node({
+      url: "media/gltf/gltf_files/box1.gltf",
+    });
+    arObject.addNode(flower);
+  } else if (choosenObject == "box2") {
+    let flower = new Gltf2Node({
+      url: "media/gltf/gltf_files/box2.glb",
+    });
+    arObject.addNode(flower);
+  } else if (choosenObject == "cylinder") {
+    let flower = new Gltf2Node({
+      url: "media/gltf/gltf_files/cylinder.glb",
+    });
+    arObject.addNode(flower);
+  } else if (choosenObject == "fish") {
+    let flower = new Gltf2Node({
+      url: "media/gltf/gltf_files/fish.glb",
+    });
+    arObject.addNode(flower);
   }
   console.log(arObject);
   session.addEventListener("end", onSessionEnded);
