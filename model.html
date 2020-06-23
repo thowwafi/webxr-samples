@@ -21,18 +21,16 @@
             <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('../assets/ShopifyModels/Chair.png');">
       
             </button>
-            <button class="slide" onclick="switchSrc(this, 'bus-shed')" style="background-image: url('../assets/ShopifyModels/Mixer.png');">
+            <button class="slide" onclick="switchSrc(this, 'bus-shed')" style="background-image: url('../assets/ShopifyModels/bus-shed.png');">
       
             </button>
-            <button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('../assets/ShopifyModels/Mixer.png');">
-      
+            <button class="slide" onclick="switchSrc(this, 'door')" style="background-image: url('../assets/ShopifyModels/door.png');">
+            
             </button>
-            <button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('../assets/ShopifyModels/GeoPlanter.png');">
+            <button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../assets/ShopifyModels/ToyTrain.png');">
             
-            </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../assets/ShopifyModels/ToyTrain.png');">
-            
-            </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('../assets/ShopifyModels/Canoe.png');">    
-          </button></div>
+            </button>
+          </div>
         </div>
       </model-viewer>
       
@@ -41,12 +39,12 @@
       
         window.switchSrc = (element, name) => {
           const base = "../assets/ShopifyModels/" + name;
-          if (name == "bus-shed") {
+          if (name == "bus-shed" || name == "door") {
               modelViewer.src = base + '.gltf';
           } else {
               modelViewer.src = base + '.glb';
           }
-        modelViewer.poster = base + '.png';
+          modelViewer.poster = base + '.png';
           const slides = document.querySelectorAll(".slide");
           slides.forEach((element) => {element.classList.remove("selected");});
           element.classList.add("selected");
@@ -67,7 +65,8 @@
         model-viewer {
           background-color: #eee;
           --poster-color: #eee;
-          height: 100vh;
+          width: 100%;
+          height: 90vh;
         }
       
         #ar-button {
